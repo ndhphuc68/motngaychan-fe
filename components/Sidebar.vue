@@ -18,7 +18,13 @@ const handleClickCategory = (id: any) => {
       <div :key="index" v-for="(item, index) in useCategory.listCategory">
         <div @click="handleClickCategory(item.data.id)" class="item mb-2">
           <span>{{ item?.data?.nameCategory }}</span>
-          <i class="pi pi-angle-right" style="font-size: 1rem"></i>
+          <i
+            class="pi"
+            :class="
+              showCategory === item.data.id ? 'pi-angle-down' : 'pi-angle-right'
+            "
+            style="font-size: 1rem"
+          ></i>
         </div>
         <div v-if="item.children.length > 0">
           <div
@@ -44,7 +50,7 @@ const handleClickCategory = (id: any) => {
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   width: 230px;
-  height: 100%;
+  height: fit-content;
   padding: 10px;
   border-radius: 8px;
   display: flex;

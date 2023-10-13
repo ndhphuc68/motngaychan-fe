@@ -15,7 +15,7 @@ onMounted(async () => {});
     <div class="flex-row mt-3 container">
       <Sidebar />
       <div class="main">
-        <button @click="categoryStore.getListCategory()">12323</button>
+        <slot />
       </div>
     </div>
   </div>
@@ -34,7 +34,11 @@ onMounted(async () => {});
     width: 100%;
     .main {
       width: calc(100% - 230px);
-      padding: 0 10px 10px 30px;
+      padding: 10px;
+      margin-left: 20px;
+      background-color: white;
+      height: fit-content;
+      border-radius: 8px;
     }
   }
 }
