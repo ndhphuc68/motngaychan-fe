@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import InputText from "primevue/inputtext";
 import Button from "primevue/button";
+
+const router = useRouter();
+
+const handleRouter = () => {
+  router.push("/cart");
+};
 </script>
 
 <template>
@@ -20,6 +26,7 @@ import Button from "primevue/button";
       </div>
       <div class="header-button">
         <Button
+          @click="handleRouter"
           icon="pi pi-shopping-cart"
           severity="success"
           text

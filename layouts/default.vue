@@ -13,10 +13,7 @@ onMounted(async () => {});
   <div class="page">
     <Header />
     <div class="flex-row mt-3 container">
-      <Sidebar />
-      <div class="main">
-        <slot />
-      </div>
+      <slot />
     </div>
   </div>
 </template>
@@ -32,14 +29,6 @@ onMounted(async () => {});
     display: flex;
     justify-content: space-between;
     width: 100%;
-    .main {
-      width: calc(100% - 230px);
-      padding: 10px;
-      margin-left: 20px;
-      background-color: white;
-      height: fit-content;
-      border-radius: 8px;
-    }
   }
 }
 </style>

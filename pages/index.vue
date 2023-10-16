@@ -13,6 +13,7 @@ const cities = ref([
 </script>
 
 <template>
+  <Sidebar />
   <div class="main">
     <Banner />
     <div class="main-header">
@@ -30,6 +31,12 @@ const cities = ref([
 
 <style scoped lang="scss">
 .main {
+  width: 100%;
+  padding: 10px;
+  margin-left: 20px;
+  background-color: white;
+  height: fit-content;
+  border-radius: 8px;
   .main-header {
     display: flex;
     justify-content: flex-end;
